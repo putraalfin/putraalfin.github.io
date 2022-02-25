@@ -1,0 +1,31 @@
+<header>
+    <div class="text">
+        <h1>API Key</h1>
+    </div>
+    <hr>
+    <div class="info">
+        <h5>Receives Problem! If you request an inner key and don't receive it within 30 minutes, please try again<h5>
+    </div>
+</header>
+<main>
+<div class="input">
+     <h3>Generate Your API key</h3>
+     <hr>
+     <form action="/APIkey" method="post">
+     <label for="email">Email</label>
+     <input type="email" id="email" size="40" name="Email" placeholder="Email..." required>
+     <p>Enter your email and get your Api key</p>
+     <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <% if (msg) { %>
+        <div class="alert alert-primary mt-4 text-center text-danger" role="alert" id="alert">
+           <p><%= msg %></p> 
+        </div>
+    <% } %> 
+</div>
+</main>
+<footer>
+    <div class="success">
+        <h6>after you get your APIkey Save it carefully and use it for every query to our API</h6>
+    </div>
+</footer>
